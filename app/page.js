@@ -1,3 +1,3 @@
-export default function Home() {
-  return <main> Hello UpLeveled </main>;
+export default function HomePage() {
+  return <main>Main page with welcome messages and cool design</main>;
 }
