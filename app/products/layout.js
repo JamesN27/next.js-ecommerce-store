@@ -1,3 +1,7 @@
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+
 export const metadata = {
   title: 'Products',
   description:
@@ -7,8 +11,7 @@ export const metadata = {
 export default function ProductsLayout({ children }) {
   return (
     <html lang="en">
-      <main />
-      {children}
+      <main className={inter.className}>{children}</main>
     </html>
   );
 }

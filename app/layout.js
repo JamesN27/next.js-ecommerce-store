@@ -16,13 +16,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav>
-          <Link href="http://localhost:3000"> Home</Link>{' '}
-          <Link href="http://localhost:3000/products"> Products</Link>{' '}
-          <Link href="http://localhost:3000/cart"> Cart</Link>{' '}
-        </nav>
-        {children}
+      <body>
+        <main className={inter.className}>
+          <nav>
+            <Link href="http://localhost:3000"> Home</Link>{' '}
+            <Link href="http://localhost:3000/products"> Products</Link>{' '}
+            <Link href="http://localhost:3000/cart"> Cart</Link>{' '}
+          </nav>
+
+          {children}
+        </main>
       </body>
     </html>
   );
