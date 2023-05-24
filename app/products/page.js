@@ -1,13 +1,14 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const jerseys = [
-  { id: 1, name: 'denver' },
-  { id: 3, name: 'lakers' },
-  { id: 6, name: 'sanantonio' },
-  { id: 2, name: 'milwaukee' },
-  { id: 4, name: 'atlanta' },
-  { id: 5, name: 'detroit' },
-  { id: 7, name: 'sacramento' },
+  { id: 1, name: 'Denver Nuggets' },
+  { id: 3, name: 'Los Angeles Lakers' },
+  { id: 6, name: 'San Antonio Spurs' },
+  { id: 2, name: 'Milwaukee Bucks' },
+  { id: 4, name: 'Atlanta Hawks' },
+  { id: 5, name: 'Detroit Pistons' },
+  { id: 7, name: 'Sacramento Kings' },
 ];
 
 const jerseysPerson = [
@@ -27,12 +28,15 @@ export default function ProductsPage() {
       {jerseys.map((jersey) => (
         <div key={`jersey-${jersey.id}`}>
           <br />
-          <Image
-            src={`/images/${jersey.name}.png`}
-            alt={jersey.name}
-            width={300}
-            height={300}
-          />
+          <p>{jersey.name}</p>
+          <Link href={`/products/${jersey.name}`}>
+            <Image
+              src={`/images/${jersey.name}.png`}
+              alt={jersey.name}
+              width={300}
+              height={300}
+            />{' '}
+          </Link>
         </div>
       ))}
       <div>
