@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+export const dynamic = 'force-dynamic';
+
 const jerseys = [
   { id: 1, name: 'Denver Nuggets' },
   { id: 2, name: 'Los Angeles Lakers' },
@@ -77,6 +79,7 @@ export default function SingleProductsPage({ params }) {
   return (
     <main>
       <h1>{decodedName}</h1>
+      <h2> Ball up with this {jersey.name} Jersey and enjoy the great game</h2>
       {jersey && (
         <div>
           <Image
