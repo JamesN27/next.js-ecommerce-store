@@ -1,8 +1,3 @@
-import {
-  isNotFoundError,
-  notFound,
-} from 'next/dist/client/components/not-found';
-import { PageNotFoundError } from 'next/dist/shared/lib/utils';
 import Image from 'next/image';
 
 const jerseys = [
@@ -67,9 +62,18 @@ export default function SingleProductsPage({ params }) {
     (person) => person.originalName === decodedName,
   );
 
-  if (!decodedName || !jerseyPerson) {
-    notFound();
+  if (!jersey && !jerseyPerson) {
+    return (
+      <main>
+        <h1>Jersey Not Found</h1>
+        <p>
+          The requested jersey does not exist my friend, please chose a regular
+          NBA jersey.
+        </p>
+      </main>
+    );
   }
+
   return (
     <main>
       <h1>{decodedName}</h1>
