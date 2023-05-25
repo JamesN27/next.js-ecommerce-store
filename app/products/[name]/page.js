@@ -1,3 +1,8 @@
+import {
+  isNotFoundError,
+  notFound,
+} from 'next/dist/client/components/not-found';
+import { PageNotFoundError } from 'next/dist/shared/lib/utils';
 import Image from 'next/image';
 
 const jerseys = [
@@ -62,6 +67,9 @@ export default function SingleProductsPage({ params }) {
     (person) => person.originalName === decodedName,
   );
 
+  if (!decodedName || !jerseyPerson) {
+    notFound();
+  }
   return (
     <main>
       <h1>{decodedName}</h1>
