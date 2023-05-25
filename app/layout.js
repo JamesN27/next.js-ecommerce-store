@@ -20,12 +20,14 @@ export default function RootLayout({ children }) {
       <body>
         <main className={inter.className}>
           <nav className={style.navbar}>
+          <div className={style.navbarLinks}>
             <Link href="http://localhost:3000"> Home</Link>{' '}
-            <Link href="http://localhost:3000/products"> Products</Link>{' '}
-            <Link href="http://localhost:3000/cart"> Cart</Link>{' '}
+            <Link href="http://localhost:3000/products"> Products</Link>{' '}</div>
+            <div className={style.cartLink}>
+              <Link href="http://localhost:3000/cart">Cart</Link>🛒{' '}
+            </div>
           </nav>
-
-          {children}
+          <div className={style.mainContent}>{children}</div>
         </main>
       </body>
     </html>

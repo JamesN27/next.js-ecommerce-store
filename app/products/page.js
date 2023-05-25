@@ -14,7 +14,6 @@ const jerseys = [
 export default function ProductsPage() {
   return (
     <main>
-      This is my products page
       {jerseys.map((jersey) => (
         <div key={`jersey-${jersey.id}`}>
           <br />

@@ -6,8 +6,27 @@
   background-color: #ca0202;
   padding: 10px;
   z-index: 9999;
+  font-size: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   a {
     background-color: transparent;
   }
+}
+
+.mainContent {
+  margin-top: 100px;
+}
+
+.cartLink {
+  margin-left: auto;
+  background-color: #ca0202;
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 130px;
+  background-color: #ca0202;
 }
