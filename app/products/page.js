@@ -1,15 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getJerseys } from '../database/jerseys';
 
-const jerseys = [
-  { id: 1, name: 'Denver Nuggets' },
-  { id: 2, name: 'Los Angeles Lakers' },
-  { id: 3, name: 'San Antonio Spurs' },
-  { id: 4, name: 'Milwaukee Bucks' },
-  { id: 5, name: 'Atlanta Hawks' },
-  { id: 6, name: 'Detroit Pistons' },
-  { id: 7, name: 'Sacramento Kings' },
-];
+const jerseys = getJerseys();
 
 export default function ProductsPage() {
   return (
