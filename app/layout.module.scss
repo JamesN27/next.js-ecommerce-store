@@ -54,3 +54,32 @@
 .test {
   margin-left: 500px;
 }
+
+.companyBox {
+  border: 1px solid #770707; /* Set the border properties */
+  padding: 5px; /* Adjust the padding as desired */
+  display: inline-block; /* Adjust the display property to inline-block */
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: 250px;
+  margin-left: 48px;
+  max-width: 600px; /* Adjust the maximum width as desired */
+  border-radius: 10px;
+  background-color: rgba(250, 123, 5, 0.85);
+}
+
+.companyBox p {
+  text-align: left;
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.companyBox h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9em;
+  color: #000000;
+  font-weight: 400;
+}
