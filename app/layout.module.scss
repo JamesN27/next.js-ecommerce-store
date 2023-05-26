@@ -1,45 +1,56 @@
 .navbar {
-  position: fixed;
+  position: relative;
   font-family: 'Playfair Display', serif;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: transparent;
+  height: 100px;
   padding: 10px;
   z-index: 9999;
   font-size: 2em;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-.navbar a {
+  justify-content: left;
   background-color: transparent;
-  text-decoration: none;
 }
 
-.mainContent {
-  margin-top: 100px;
-  z-index: 9999;
-}
+.mainLogo {
+  display: flex;
 
-.cartLink {
-  margin-left: auto;
-  background-color: transparent;
+  justify-content: flex-start;
+  margin-left: -90px;
+  margin-bottom: -250px; /* Adjust the margin as needed to move the logo down */
 }
 
 .navbarLinks {
+  position: absolute;
+  top: 50%; /* Position the links vertically in the middle */
+  left: 50%; /* Position the links horizontally in the middle */
+  transform: translate(-50%, -50%); /* Center the links precisely */
   display: flex;
-  gap: 130px;
-  background-color: transparent;
-  margin-left: 200px;
+  gap: 100px;
+  align-items: center;
+  margin-left: 150px; /* Align the links vertically in the middle */
+  /* Align the links horizontally in the middle */
+
+  .homeLink {
+    margin-right: 0px;
+
+    // Styles for the Home link...
+  }
+
+  .productsLink {
+    margin-right: 8px;
+    // Styles for the Products link...
+  }
+
+  .cartLink {
+    justify-self: flex-end;
+    margin-left: 400px;
+  }
 }
 
-.navbar h1 {
-  font-size: 1em; /* Adjust the font size as needed */
-  font-weight: normal;
+.navbar a {
+  text-decoration: none;
 }
-.navbarLinksRight {
-  display: flex;
-  gap: 30px;
+
+.test {
+  margin-left: 500px;
 }

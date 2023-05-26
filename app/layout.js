@@ -1,5 +1,7 @@
 import './globals.scss';
+import Image from 'next/image';
 import Link from 'next/link';
+import logo from '../public/images/logo.png';
 import style from './layout.module.scss';
 
 export const metadata = {
@@ -7,8 +9,7 @@ export const metadata = {
     default: 'Home | Pro Hoops Apparel',
     template: '%s | Pro Hoops Apparel',
   },
-  description:
-    'Get your brandnew NBA gear here and ball up for the great game ',
+  description: 'Get your brandnew NBA gear here and ball up for the great game',
 };
 
 export default function RootLayout({ children }) {
@@ -17,20 +18,31 @@ export default function RootLayout({ children }) {
       <body>
         <main>
           <nav className={style.navbar}>
-            <div>
-              <h1>Pro Hoops Apparel </h1>
+            <div className={style.mainLogo}>
+              <Image src={logo} alt="Logo" width={500} height={500} />
             </div>
-            <div className={style.navbarLinksRight}>
-              <div className={style.navbarLinks}>
-                <Link href="http://localhost:3000"> Home</Link>{' '}
-                <Link href="http://localhost:3000/products"> Products</Link>{' '}
+
+            <div className={style.navbarLinks}>
+              <Link href="http://localhost:3000" className={style.homeLink}>
+                Home
+              </Link>
+              <Link
+                href="http://localhost:3000/products"
+                className={style.productsLink}
+              >
+                Products
+              </Link>
+              <div className={style.test}>
+                <Link
+                  href="http://localhost:3000/cart"
+                  className={style.cartLink}
+                >
+                  Cart
+                </Link>
               </div>
             </div>
-            <div className={style.cartLink}>
-              <Link href="http://localhost:3000/cart">Cart</Link>🏀{' '}
-            </div>
           </nav>
-          <div className={style.mainContent}>{children}</div>
+          <div>{children}</div>
         </main>
       </body>
     </html>
