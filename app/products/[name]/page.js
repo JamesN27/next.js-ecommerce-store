@@ -32,6 +32,7 @@ export default function SingleProductsPage({ params }) {
       <h2>Ball up with this {jersey.name} Jersey and enjoy the great game</h2>
       {jersey && (
         <div>
+          <div> {jersey.price} </div>
           <Image
             src={`/images/${encodeURIComponent(jersey.name)}.png`}
             alt={jersey.name}

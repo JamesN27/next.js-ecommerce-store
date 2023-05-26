@@ -1,6 +1,7 @@
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import { getJerseys } from '../database/jerseys';
+import RemoveFromCart from './RemoveButton';
 
 export default function CartPage() {
   const jerseyQuantityCookie = getCookie('cart');
@@ -34,7 +35,7 @@ export default function CartPage() {
       const totalPrice = eachJerseyPrice.reduce((acc, currentValue) => {
         return acc + currentValue;
       }, 0);
-      return totalPrice.toFixed(2); // Fixing the total price to 2 decimal places
+      return totalPrice.toFixed(2);
     } else {
       return '0.00';
     }
@@ -63,6 +64,7 @@ export default function CartPage() {
       )}
       <div data-test-id="cart-total">Total price: €{totalPrice}</div>
       {order.length === 0 && <div>Nothing in the cart</div>}
+      <RemoveFromCart />
     </main>
   );
 }

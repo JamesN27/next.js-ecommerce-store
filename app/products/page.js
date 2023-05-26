@@ -11,6 +11,7 @@ export default function ProductsPage() {
         <div key={`jersey-${jersey.id}`}>
           <br />
           <p>{jersey.name}</p>
+          <div> {jersey.price}</div>
           <Link href={`/products/${encodeURIComponent(jersey.name)}`}>
             <Image
               src={`/images/${encodeURIComponent(jersey.name)}.png`}
