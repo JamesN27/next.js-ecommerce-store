@@ -1,3 +1,16 @@
-.MainLogo {
-  margin-top: 200px;
+.heroImage {
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heroImage img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.pageTitle {
+  z-index: 1000;
 }

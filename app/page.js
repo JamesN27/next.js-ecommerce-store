@@ -1,18 +1,24 @@
 import Image from 'next/image';
+import React from 'react';
+import heroImage from '../public/images/heroimage.png';
 import style from './page.module.scss';
 
 export default function HomePage() {
   return (
     <div>
-      <h2>Welcome to My Page</h2>
-      <Image
-        className={style.MainLogo}
-        src="/images/nbalogo.jpg"
-        alt="NBA Main Logo"
-        width={988}
-        height={600}
-      />
-      {/* Content specific to the main page! */}
+      <div>
+        <div>
+          <Image
+            className={style.heroImage}
+            src={heroImage}
+            alt="Hero Image"
+            layout="fill"
+            priority={true}
+          />
+        </div>
+        <nav className={style.navbar}>{/* Navbar content */}</nav>
+
+      </div>
     </div>
   );
 }

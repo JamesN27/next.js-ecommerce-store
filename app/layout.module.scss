@@ -1,32 +1,45 @@
 .navbar {
   position: fixed;
+  font-family: 'Playfair Display', serif;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #ca0202;
+  background-color: transparent;
   padding: 10px;
   z-index: 9999;
   font-size: 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  a {
-    background-color: transparent;
-  }
+.navbar a {
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .mainContent {
   margin-top: 100px;
+  z-index: 9999;
 }
 
 .cartLink {
   margin-left: auto;
-  background-color: #ca0202;
+  background-color: transparent;
 }
 
 .navbarLinks {
   display: flex;
   gap: 130px;
-  background-color: #ca0202;
+  background-color: transparent;
+  margin-left: 200px;
+}
+
+.navbar h1 {
+  font-size: 1em; /* Adjust the font size as needed */
+  font-weight: normal;
+}
+.navbarLinksRight {
+  display: flex;
+  gap: 30px;
 }

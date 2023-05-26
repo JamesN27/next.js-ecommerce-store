@@ -4,6 +4,9 @@ dependencies:
   next:
     specifier: 13.4.3
     version: 13.4.3(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)(sass@1.62.1)
+  next-google-fonts:
+    specifier: ^2.2.0
+    version: 2.2.0(next@13.4.3)(react-dom@18.2.0)(react@18.2.0)
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -2668,6 +2671,19 @@ packages:
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
+
+  /next-google-fonts@2.2.0(next@13.4.3)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-TCtNp+uu0vof2X8Xfptfw96Unc3zsUekBY2l4g2mGAX+U8QO/yfAaEioGhFCwU05M8NbMgwP5C8V40Vtwp87iQ==}
+    deprecated: As of Next.js 10.2, Google Fonts are automatically optimized! For more info, see https://github.com/joe-bell/next-google-fonts
+    peerDependencies:
+      next: '>= 10.0.7'
+      react: '>= 17.0.1'
+      react-dom: '>= 17.0.1'
+    dependencies:
+      next: 13.4.3(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)(sass@1.62.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /next@13.4.3(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)(sass@1.62.1):
     resolution: {integrity: sha512-FV3pBrAAnAIfOclTvncw9dDohyeuEEXPe5KNcva91anT/rdycWbgtu3IjUj4n5yHnWK8YEPo0vrUecHmnmUNbA==}
