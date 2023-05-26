@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { getJerseys, getJerseysPerson } from '../../database/jerseys';
+import AddToCart from './AddToCart';
 
 const jerseys = getJerseys();
 const jerseysPerson = getJerseysPerson();
@@ -18,8 +19,8 @@ export default function SingleProductsPage({ params }) {
       <main>
         <h1>Jersey Not Found</h1>
         <p>
-          The requested jersey does not exist my friend, please chose a regular
-          NBA jersey.
+          The requested jersey does not exist, please choose a regular NBA
+          jersey.
         </p>
       </main>
     );
@@ -28,7 +29,7 @@ export default function SingleProductsPage({ params }) {
   return (
     <main>
       <h1>{decodedName}</h1>
-      <h2> Ball up with this {jersey.name} Jersey and enjoy the great game</h2>
+      <h2>Ball up with this {jersey.name} Jersey and enjoy the great game</h2>
       {jersey && (
         <div>
           <Image
@@ -37,6 +38,7 @@ export default function SingleProductsPage({ params }) {
             width={300}
             height={300}
           />
+          <AddToCart jersey={jersey} />
         </div>
       )}
       {jerseyPerson && (

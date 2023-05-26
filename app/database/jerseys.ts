@@ -1,12 +1,12 @@
 export const getJerseys = () => {
   return [
-    { id: 1, name: 'Denver Nuggets', price: '100$' },
-    { id: 2, name: 'Los Angeles Lakers', price: '70$' },
-    { id: 3, name: 'San Antonio Spurs', price: '40$' },
-    { id: 4, name: 'Milwaukee Bucks', price: '100$' },
-    { id: 5, name: 'Atlanta Hawks', price: '70$' },
-    { id: 6, name: 'Detroit Pistons', price: '40$' },
-    { id: 7, name: 'Sacramento Kings', price: '200$' },
+    { id: 1, name: 'Denver Nuggets', price: '100€' },
+    { id: 2, name: 'Los Angeles Lakers', price: '70€' },
+    { id: 3, name: 'San Antonio Spurs', price: '40€' },
+    { id: 4, name: 'Milwaukee Bucks', price: '100€' },
+    { id: 5, name: 'Atlanta Hawks', price: '70€' },
+    { id: 6, name: 'Detroit Pistons', price: '40€' },
+    { id: 7, name: 'Sacramento Kings', price: '200€' },
   ];
 };
 
