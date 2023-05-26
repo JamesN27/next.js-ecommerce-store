@@ -8,11 +8,11 @@ export default function HomePage() {
       <Image
         className={style.MainLogo}
         src="/images/nbalogo.jpg"
-        alt="Main Image"
+        alt="NBA Main Logo"
         width={988}
         height={600}
       />
-      {/* Other content specific to the page */}
+      {/* Content specific to the main page! */}
     </div>
   );
 }
