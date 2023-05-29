@@ -6,6 +6,7 @@ const jerseys = getJerseys();
 
 export default function ProductsPage() {
   return (
+
     <main>
       {jerseys.map((jersey) => (
         <div key={`jersey-${jersey.id}`}>

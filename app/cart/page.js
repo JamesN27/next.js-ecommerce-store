@@ -1,6 +1,7 @@
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import { getJerseys } from '../database/jerseys';
+import CartLayout from './layout';
 import RemoveFromCart from './RemoveButton';
 
 export default function CartPage() {
@@ -43,7 +44,7 @@ export default function CartPage() {
   const totalPrice = getTotalPrice();
 
   return (
-    <main>
+    <CartLayout>
       <h1>Shopping cart</h1>
       {order.length > 0 && (
         <ul>
@@ -65,6 +66,6 @@ export default function CartPage() {
       <div data-test-id="cart-total">Total price: €{totalPrice}</div>
       {order.length === 0 && <div>Nothing in the cart</div>}
       <RemoveFromCart />
-    </main>
+    </CartLayout>
   );
 }
