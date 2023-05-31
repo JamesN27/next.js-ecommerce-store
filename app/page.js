@@ -10,8 +10,8 @@ export default function HomePage() {
           className={style.heroImage}
           src={heroImage}
           alt="Hero Image"
-          layout="fill"
           priority={true}
+          layout="fill"
         />
       </div>
       <div className={style.companyBox}>

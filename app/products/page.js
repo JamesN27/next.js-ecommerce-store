@@ -13,8 +13,8 @@ export default function ProductsPage() {
           className={style.productsImage}
           src="/images/productsimage.png"
           alt="Hero Image"
-          layout="fill"
           priority={true}
+          layout="fill"
         />
       </div>
       {jerseys.map((jersey) => (

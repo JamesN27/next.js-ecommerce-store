@@ -1,6 +1,8 @@
+import Image from 'next/image';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import { getJerseys } from '../database/jerseys';
+import style from './cartlayout.module.scss';
 import RemoveFromCart from './RemoveButton';
 
 export default function CartPage() {
@@ -44,6 +46,15 @@ export default function CartPage() {
 
   return (
     <main>
+      <div>
+        <Image
+          className={style.heroImage}
+          src="/images/cartbackground.png"
+          alt="Hero Image"
+          priority={true}
+          layout="fill"
+        />
+      </div>
       <h1>Shopping cart</h1>
       {order.length > 0 && (
         <ul>
