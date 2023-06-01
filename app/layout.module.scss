@@ -12,11 +12,22 @@
 }
 
 .mainLogo {
-  display: flex;
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+}
 
-  justify-content: flex-start;
-  margin-left: -90px;
-  margin-bottom: -250px; /* Adjust the margin as needed to move the logo down */
+.logoContainer img {
+  position: absolute;
+  top: 120%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.logoContainer {
+  width: 20px; /* Set the desired width */
+  height: 20px; /* Set the desired height */
+  overflow: hidden;
 }
 
 .navbarLinks {

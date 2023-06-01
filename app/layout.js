@@ -20,7 +20,9 @@ export default function RootLayout({ children }) {
           <nav className={style.navbar}>
             <div className={style.mainLogo}>
               <Link href="http://localhost:3000">
-                <Image src={logo} alt="Logo" width={500} height={500} />
+                <div className={style.logoContainer}>
+                  <Image src={logo} alt="Logo" width={300} height={200} />
+                </div>
               </Link>
             </div>
 
