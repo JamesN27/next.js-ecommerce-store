@@ -19,7 +19,9 @@ export default function RootLayout({ children }) {
         <main>
           <nav className={style.navbar}>
             <div className={style.mainLogo}>
-              <Image src={logo} alt="Logo" width={500} height={500} />
+              <Link href="http://localhost:3000">
+                <Image src={logo} alt="Logo" width={500} height={500} />
+              </Link>
             </div>
 
             <div className={style.navbarLinks}>
