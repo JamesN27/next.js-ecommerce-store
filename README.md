@@ -39,11 +39,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] Thank you page
 - [ ] Small Footer
 - [ ] Remove Button for every single product
-- [ ] Jersey Adding small problem fix
+- [ ] Jersey Adding problem fix
 - [ ] Official NBA Logo on Homepage right
+- [ ] Position product jerseys in Eastern / Western divisions
 
 - [ ] Background picture for single products with team logo style
-- [ ] Change background pictures from JSX to CSS file with background-image
+- [ ] Change background pictures from JSX to CSS file with background-image / Flashing??
 
 - [ ] Typescript
 - [ ] Testing
