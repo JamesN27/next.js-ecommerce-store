@@ -32,3 +32,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### Todo List
+
+- [ ] Checkout Page
+- [ ] Thank you page
+- [ ] Small Footer
+- [ ] Remove Button for every single product
+- [ ] Jersey Adding small problem fix
+- [ ] Official NBA Logo on Homepage right
+
+- [ ] Background picture for single products with team logo style
+- [ ] Change background pictures from JSX to CSS file with background-image
+
+- [ ] Typescript
+- [ ] Testing
