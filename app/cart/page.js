@@ -37,7 +37,7 @@ export default async function CartPage() {
   function getTotalPrice() {
     if (order.length > 0) {
       const eachJerseyPrice = order.map((obj) => {
-        const priceNumber = parseFloat(obj.price.replace('€', ''));
+        const priceNumber = parseFloat(obj.price.replace());
         return priceNumber * obj.quantity;
       });
 
@@ -73,7 +73,7 @@ export default async function CartPage() {
                 data-test-id={`cart-product-${item.id}`}
                 key={`jersey-${item.id}`}
               >
-                {`${item.name} Jersey €${item.price}`}
+                {`${item.name} Jersey ${item.price}`}
                 <div data-test-id={`cart-product-quantity-${item.id}`}>
                   Quantity: {item.quantity}
                 </div>
@@ -82,7 +82,7 @@ export default async function CartPage() {
           })}
         </ul>
       )}
-      <div data-test-id="cart-total">Total price: €{totalPrice}</div>
+      <div data-test-id="cart-total">Total price: {totalPrice}$</div>
       {order.length === 0 && <div>Nothing in the cart</div>}
       <RemoveFromCart />
     </main>
