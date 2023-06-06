@@ -1,32 +1,38 @@
 import Image from 'next/image';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
-import { getJerseys } from '../database/jerseys';
+import { getJerseys } from '../database/jerseys.ts';
 import style from './cartlayout.module.scss';
 import RemoveFromCart from './RemoveButton';
 
-export default function CartPage() {
+export default async function CartPage() {
   const jerseyQuantityCookie = getCookie('cart');
   const jerseyQuantities = !jerseyQuantityCookie
     ? []
     : parseJson(jerseyQuantityCookie);
 
   const order = [];
-  function findOrderedJerseys() {
+
+  async function findOrderedJerseys() {
+    const jerseys = await getJerseys();
+
     for (let i = 0; i < jerseyQuantities.length; i++) {
-      const orderedJersey = getJerseys().find(
+      const orderedJersey = jerseys.find(
         (jersey) => jersey.id === jerseyQuantities[i]['id'],
       );
-      if (orderedJersey && orderedJersey.id === jerseyQuantities[i]['id']) {
+
+      if (orderedJersey) {
         order.push({
           ...orderedJersey,
           quantity: jerseyQuantities[i]['quantity'],
         });
       }
     }
+
     return order;
   }
-  findOrderedJerseys();
+
+  await findOrderedJerseys();
 
   function getTotalPrice() {
     if (order.length > 0) {
@@ -34,14 +40,17 @@ export default function CartPage() {
         const priceNumber = parseFloat(obj.price.replace('€', ''));
         return priceNumber * obj.quantity;
       });
+
       const totalPrice = eachJerseyPrice.reduce((acc, currentValue) => {
         return acc + currentValue;
       }, 0);
+
       return totalPrice.toFixed(2);
     } else {
       return '0.00';
     }
   }
+
   const totalPrice = getTotalPrice();
 
   return (

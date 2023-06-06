@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getJerseys } from '../database/jerseys';
+import { getJerseys } from '../database/jerseys.ts';
 import style from './productlayout.module.scss';
 
-const jerseys = getJerseys();
+//
 
-export default function ProductsPage() {
+export default async function ProductsPage() {
+  const jerseys = await getJerseys();
   return (
     <main>
       <div>

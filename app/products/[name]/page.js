@@ -1,13 +1,15 @@
 import Image from 'next/image';
-import { getJerseys, getJerseysPerson } from '../../database/jerseys';
+import { getJerseys, getJerseysPerson } from '../../database/jerseys.ts';
 import AddToCart from './AddToCart';
 
-const jerseys = getJerseys();
-const jerseysPerson = getJerseysPerson();
+// const jerseys = await getJerseys();
+// const jerseysPerson = getJerseysPerson();
 
 export const dynamic = 'force-dynamic';
 
-export default function SingleProductsPage({ params }) {
+export default async function SingleProductsPage({ params }) {
+  const jerseys = await getJerseys();
+  const jerseysPerson = getJerseysPerson();
   const decodedName = decodeURIComponent(params.name);
   const jersey = jerseys.find((item) => item.name === decodedName);
   const jerseyPerson = jerseysPerson.find(
