@@ -22,13 +22,13 @@ export default async function ProductsPage() {
         <div key={`jersey-${jersey.id}`}>
           <br />
           <p>{jersey.name}</p>
-          <div>{jersey.price}</div>
+
           <Link href={`/products/${encodeURIComponent(jersey.name)}`}>
             <Image
-              src={`/images/${encodeURIComponent(jersey.name)}.png`}
+              src={`/images2/${encodeURIComponent(jersey.name)}.png`}
               alt={jersey.name}
-              width={300}
-              height={300}
+              width={150}
+              height={126}
             />
           </Link>
         </div>
