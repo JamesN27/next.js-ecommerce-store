@@ -48,3 +48,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - [ ] Typescript
 - [ ] Testing
+
+
+
+.hero {
+  background-image: url(‘../public/images/background-1-10percent.jpg’);
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
