@@ -42,6 +42,13 @@ export default function RootLayout({ children }) {
                   className={style.cartLink}
                 >
                   Cart
+                  <span
+                    role="img"
+                    aria-label="Basketball"
+                    style={{ fontSize: '0.9em' }}
+                  >
+                    🏀
+                  </span>
                 </Link>
               </div>
             </div>

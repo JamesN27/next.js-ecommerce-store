@@ -141,7 +141,7 @@ export default function UserInfoForm() {
         type="button"
         data-test-id="checkout-confirm-order"
         disabled={!isValid}
-        onClick={() => router.push('/checkout/thank-you')}
+        onClick={() => router.push('/thank-you')}
       >
         Confirm order
       </button>
