@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import { getJerseys } from '../database/jerseys.ts';
@@ -85,6 +86,9 @@ export default async function CartPage() {
       <div data-test-id="cart-total">Total price: {totalPrice}$</div>
       {order.length === 0 && <div>Nothing in the cart</div>}
       <RemoveFromCart />
+      <Link href="http://localhost:3000/checkout">
+        <p>Proceed to Checkout</p>
+      </Link>
     </main>
   );
 }

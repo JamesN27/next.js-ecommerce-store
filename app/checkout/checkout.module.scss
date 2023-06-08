@@ -1,0 +1,12 @@
+.heroImage {
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heroImage img {
+  object-fit: cover;
+  width: 100%;
+
+  z-index: 1;
+}
