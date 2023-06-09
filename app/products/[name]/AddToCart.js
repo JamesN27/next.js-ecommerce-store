@@ -25,7 +25,7 @@ export default function AddToCart(props) {
   }
 
   return (
-    <div className="add-to-cart">
+    <div className={style.container}>
       <label>
         Quantity
         <button className={style.numberButton1} onClick={decrementJersey}>
@@ -42,7 +42,7 @@ export default function AddToCart(props) {
         </button>
       </label>
       <form onSubmit={handleAddToCart}>
-        <button className="add-to-cart-button">Add to Cart</button>
+        <button className={style.cartButton}>Add to Cart</button>
       </form>
     </div>
   );

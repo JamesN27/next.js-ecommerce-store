@@ -3,9 +3,9 @@ import style from './thankyou.module.scss';
 
 export default function ThankYouPage() {
   return (
-    <div>
-      <h1>Thank You!</h1>
-      <p>Your order has been confirmed.</p>
+    <div className={style.thankyouInput}>
+      <h1>Basketball Swag Secured!</h1>
+      <p>Order confirmed. Let's ball!</p>
 
       <div>
         <Image
