@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getJerseys, getJerseysPerson } from '../../database/jerseys.ts';
 import AddToCart from './AddToCart';
+import style from './singleProduct.module.scss';
 
 export const dynamic = 'force-dynamic';
 
@@ -38,7 +39,7 @@ export default async function SingleProductsPage({ params }) {
     left: 0,
     width: '100%',
     height: '100%',
-    backgroundImage: 'url("/images/test.png")',
+    backgroundImage: 'url("/images/test2.png")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     zIndex: -1,
@@ -48,10 +49,12 @@ export default async function SingleProductsPage({ params }) {
     <main>
       <div style={heroImageStyle}>
         <div style={backgroundImageStyle} />
-        <h1>{decodedName}</h1>
-        <h2>Ball up with this {jersey?.name} and enjoy the great game</h2>
+        <h1 className={style.title}>{decodedName}</h1>
+        <h2 className={style.subtitle}>
+          Ball up with this {jersey?.name} and enjoy the great game
+        </h2>
         {jersey && (
-          <div>
+          <div className={style.singleProduct}>
             <div>{jersey.price}</div>
             <Image
               src={`/images/${encodeURIComponent(jersey.name)}.png`}
@@ -59,17 +62,20 @@ export default async function SingleProductsPage({ params }) {
               width={300}
               height={300}
             />
-            <AddToCart jersey={jersey} />
           </div>
         )}
+
         {jerseyPerson && (
-          <div>
+          <div className={style.singleProduct2}>
             <Image
               src={`/images/${encodeURIComponent(jerseyPerson.name)}.png`}
               alt={jerseyPerson.originalName}
               width={300}
               height={300}
             />
+            <div className={style.addToCart}>
+              <AddToCart jersey={jersey} />
+            </div>
           </div>
         )}
       </div>
