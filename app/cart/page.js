@@ -78,6 +78,7 @@ export default async function CartPage() {
                 <div data-test-id={`cart-product-quantity-${item.id}`}>
                   Quantity: {item.quantity}
                 </div>
+                <RemoveFromCart jerseyId={item.id} quantity={item.quantity} />
               </li>
             );
           })}
@@ -85,7 +86,6 @@ export default async function CartPage() {
       )}
       <div data-test-id="cart-total">Total price: {totalPrice}$</div>
       {order.length === 0 && <div>Nothing in the cart</div>}
-      <RemoveFromCart />
       <Link href="http://localhost:3000/checkout">
         <p>Proceed to Checkout</p>
       </Link>
