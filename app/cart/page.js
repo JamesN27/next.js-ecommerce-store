@@ -74,7 +74,7 @@ export default async function CartPage() {
                 data-test-id={`cart-product-${item.id}`}
                 key={`jersey-${item.id}`}
               >
-                {`${item.name} Jersey ${item.price}`}
+                {`${item.name}  ${item.price}`}
                 <div data-test-id={`cart-product-quantity-${item.id}`}>
                   Quantity: {item.quantity}
                 </div>
