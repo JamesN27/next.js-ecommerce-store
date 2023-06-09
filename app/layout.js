@@ -2,6 +2,8 @@ import './globals.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../public/images/logo.png';
+import { getCookie } from '../util/cookies';
+import { parseJson } from '../util/json';
 import style from './layout.module.scss';
 
 export const metadata = {
@@ -13,6 +15,16 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const jerseyQuantityCookie = getCookie('cart');
+
+  const jerseyQuantities = !jerseyQuantityCookie
+    ? []
+    : parseJson(jerseyQuantityCookie);
+
+  const totalQuantity = jerseyQuantities.reduce((acc, currentValue) => {
+    return acc + currentValue.quantity;
+  }, 0);
+
   return (
     <html lang="en">
       <body>
@@ -34,21 +46,26 @@ export default function RootLayout({ children }) {
                 href="http://localhost:3000/products"
                 className={style.productsLink}
               >
-                Products
+                Products{' '}
+                <span
+                  role="img"
+                  aria-label="Basketball"
+                  style={{ fontSize: '0.8em' }}
+                >
+                  🏀
+                </span>
               </Link>
               <div className={style.test}>
                 <Link
                   href="http://localhost:3000/cart"
                   className={style.cartLink}
                 >
-                  Cart
+                  Cart{' '}
                   <span
-                    role="img"
-                    aria-label="Basketball"
+                    aria-label="number of cakes in the cart"
+                    data-test-id="cart-count"
                     style={{ fontSize: '0.9em' }}
-                  >
-                    🏀
-                  </span>
+                  >{`(${totalQuantity})`}</span>
                 </Link>
               </div>
             </div>

@@ -29,7 +29,7 @@ export default function RemoveFromCart(props) {
         value={quantityToRemove}
         onChange={handleQuantityChange}
       />
-      <button type="submit">Remove</button>
+      <button>Remove</button>
     </form>
   );
 }
