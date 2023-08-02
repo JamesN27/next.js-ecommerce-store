@@ -33,28 +33,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-### Todo List
-
-
-- [ ] Remove Button for every single product
-- [ ] Jersey Adding problem fix
-
-
-
-- [ ] Background picture for single products with team logo style
-- [ ] Change background pictures from JSX to CSS file with background-image / Flashing??
-
-- [ ] Typescript
-- [ ] Testing
-
-
-
-.hero {
-  background-image: url(‘../public/images/background-1-10percent.jpg’);
-  background-size: cover;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: flex-end;
-}
+Vercel Deployment Test Note
