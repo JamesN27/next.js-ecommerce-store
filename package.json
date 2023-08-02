@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "dotenv-safe": "^8.2.0",
     "next": "13.4.3",
     "next-google-fonts": "^2.2.0",
+    "postgres": "^3.3.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.62.1",
@@ -18,9 +20,10 @@
     "sharp": "^0.32.1"
   },
   "devDependencies": {
+    "@types/dotenv-safe": "^8.1.2",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
-    "eslint-config-upleveled": "^4.4.0",
+    "eslint-config-upleveled": "^4.5.0",
     "stylelint": "^15.6.2",
     "stylelint-config-upleveled": "^1.0.2",
     "typescript": "^5.0.4"

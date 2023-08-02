@@ -1,13 +1,29 @@
-export const getJerseys = () => {
-  return [
-    { id: 1, name: 'Denver Nuggets Jersey', price: '100€' },
-    { id: 2, name: 'Los Angeles Lakers Jersey', price: '70€' },
-    { id: 3, name: 'San Antonio Spurs Jersey', price: '40€' },
-    { id: 4, name: 'Milwaukee Bucks Jersey', price: '100€' },
-    { id: 5, name: 'Atlanta Hawks Jersey', price: '70€' },
-    { id: 6, name: 'Detroit Pistons Jersey', price: '40€' },
-  ];
-};
+import { cache } from 'react';
+import { sql } from './connect';
+
+interface Jersey {
+  id: number;
+  name: string;
+  price: string;
+}
+
+export const getJerseys = cache(async () => {
+  const jerseys = await sql<Jersey[]>`
+    SELECT * FROM jerseys
+  `;
+  return jerseys;
+});
+
+// export const getJerseys = () => {
+// return [
+// { id: 1, name: 'Denver Nuggets Jersey', price: '100€' },
+// { id: 2, name: 'Los Angeles Lakers Jersey', price: '70€' },
+// { id: 3, name: 'San Antonio Spurs Jersey', price: '40€' },
+// { id: 4, name: 'Milwaukee Bucks Jersey', price: '100€' },
+// { id: 5, name: 'Atlanta Hawks Jersey', price: '70€' },
+//  { id: 6, name: 'Detroit Pistons Jersey', price: '40€' },
+// ];
+// };
 
 export const getJerseysPerson = () => {
   return [

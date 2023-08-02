@@ -10,3 +10,30 @@
 
   z-index: 1;
 }
+
+.logoItemWest {
+  display: flex;
+  flex-direction: column;
+  margin-left: 430px;
+}
+
+.logoItemEast {
+  display: flex;
+  flex-direction: column;
+  margin-right: 440px;
+}
+
+.logoContainer {
+  display: flex; /* Display the logos in a row */
+  justify-content: space-between; /* Add space between the logos */
+  margin-top: 20vh; /* Adjust the margin-top value to position the logos vertically */
+}
+
+// .logoContainer p {
+//  color: white;
+//  font-weight: bold;
+// }
+
+.logoContainer img {
+  margin-bottom: 34px;
+}

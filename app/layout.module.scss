@@ -49,12 +49,13 @@
 
   .productsLink {
     margin-right: 8px;
+    white-space: nowrap;
     // Styles for the Products link...
   }
 
   .cartLink {
-    justify-self: flex-end;
     margin-left: 400px;
+    white-space: nowrap;
   }
 }
 

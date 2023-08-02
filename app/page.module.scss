@@ -10,16 +10,24 @@
 
   z-index: 1;
 }
+
+.logoImage {
+  position: fixed;
+  top: 75%;
+  right: -50px;
+  transform: translateY(-60%);
+  opacity: 95%;
+}
 .companyBox {
-  border: 1px solid #770707; /* Set the border properties */
-  padding: 5px; /* Adjust the padding as desired */
-  display: inline-block; /* Adjust the display property to inline-block */
+  border: 1px solid #770707;
+  padding: 5px;
+  display: inline-block;
   align-items: center;
   justify-content: center;
   width: fit-content;
   margin-top: 250px;
   margin-left: 48px;
-  max-width: 600px; /* Adjust the maximum width as desired */
+  max-width: 600px;
   border-radius: 10px;
   background-color: rgba(250, 123, 5, 0.85);
 }
@@ -37,4 +45,28 @@
   font-size: 1.9em;
   color: #000000;
   font-weight: 400;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1px;
+  opacity: 65%;
+  text-align: left;
+
+  background-image: linear-gradient(to right, orange, red);
+}
+
+.footer p {
+  font-size: 19px;
+  font-weight: bold;
+  color: #830000;
+}
+
+.footer p:hover {
+  color: #1c04f3;
+
+  font-weight: bold;
 }

@@ -2,9 +2,9 @@
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { addItemToCart } from './actions';
+import style from './singleProduct.module.scss';
 
 export default function AddToCart(props) {
-
   const [quantity, setQuantity] = useState(1);
   const router = useRouter();
 
@@ -25,16 +25,25 @@ export default function AddToCart(props) {
   }
 
   return (
-    <>
+    <div className={style.container}>
       <label>
         Quantity
-        <button onClick={decrementJersey}>-</button>
-        <input data-test-id="product-quantity" value={quantity} readOnly />
-        <button onClick={incrementJersey}>+</button>
+        <button className={style.numberButton1} onClick={decrementJersey}>
+          -
+        </button>
+        <input
+          className={style.quantityInput}
+          type="number"
+          value={quantity}
+          readOnly
+        />
+        <button className={style.numberButton2} onClick={incrementJersey}>
+          +
+        </button>
       </label>
       <form onSubmit={handleAddToCart}>
-        <button data-test-id="product-add-to-cart">Add to cart</button>
+        <button className={style.cartButton}>Add to Cart</button>
       </form>
-    </>
+    </div>
   );
 }

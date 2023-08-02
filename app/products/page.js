@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getJerseys } from '../database/jerseys';
+import { getJerseys } from '../database/jerseys.ts';
 import style from './productlayout.module.scss';
 
-const jerseys = getJerseys();
+export default async function ProductsPage() {
+  const jerseys = await getJerseys();
+  const firstSet = jerseys.slice(0, 3);
+  const secondSet = jerseys.slice(3, 6);
 
-export default function ProductsPage() {
   return (
     <main>
       <div>
@@ -17,21 +19,36 @@ export default function ProductsPage() {
           layout="fill"
         />
       </div>
-      {jerseys.map((jersey) => (
-        <div key={`jersey-${jersey.id}`}>
-          <br />
-          <p>{jersey.name}</p>
-          <div>{jersey.price}</div>
-          <Link href={`/products/${encodeURIComponent(jersey.name)}`}>
-            <Image
-              src={`/images/${encodeURIComponent(jersey.name)}.png`}
-              alt={jersey.name}
-              width={300}
-              height={300}
-            />
-          </Link>
+      <div className={style.logoContainer}>
+        <div className={style.logoItemWest}>
+          {firstSet.map((jersey) => (
+            <div key={`jersey-${jersey.id}`}>
+              <Link href={`/products/${encodeURIComponent(jersey.name)}`}>
+                <Image
+                  src={`/images4/${encodeURIComponent(jersey.name)}.png`}
+                  alt={jersey.name}
+                  width={195}
+                  height={164}
+                />
+              </Link>
+            </div>
+          ))}
         </div>
-      ))}
+        <div className={style.logoItemEast}>
+          {secondSet.map((jersey) => (
+            <div key={`jersey-${jersey.id}`}>
+              <Link href={`/products/${encodeURIComponent(jersey.name)}`}>
+                <Image
+                  src={`/images5/${encodeURIComponent(jersey.name)}.png`}
+                  alt={jersey.name}
+                  width={195}
+                  height={164}
+                />
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
     </main>
   );
 }

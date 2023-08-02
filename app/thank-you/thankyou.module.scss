@@ -1,0 +1,27 @@
+.heroImage {
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heroImage img {
+  object-fit: cover;
+  width: 100%;
+
+  z-index: 1;
+}
+
+.thankyouInput {
+  margin-top: 275px;
+  margin-left: 48px;
+}
+
+.thankyouInput h1 {
+  color: rgb(233, 110, 9);
+  font-size: 4em;
+}
+
+.thankyouInput p {
+  color: rgb(233, 110, 9);
+  font-size: 2em;
+}

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import heroImage from '../public/images/heroimage.png';
+import logoImage from '../public/images/Logo8.png';
 import style from './page.module.scss';
 
 export default function HomePage() {
@@ -26,6 +27,23 @@ export default function HomePage() {
           own piece of NBA greatness!
         </p>
       </div>
+      <div className={style.logoImage}>
+        <Image
+          className={style.logoImage}
+          src={logoImage}
+          atl="NBA Logo"
+          width={525}
+          height={295}
+        />{' '}
+      </div>
+      <footer className={style.footer}>
+        <p>
+          &copy; {new Date().getFullYear()} Pro Hoops Apparel. All rights
+          reserved 🏀 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          &nbsp; &nbsp; Hoop Alley 77, Sacramento, CA 95814 United States
+          &nbsp;| &nbsp;prohoops@apparel.com &nbsp;|&nbsp; (555) 867-5309
+        </p>
+      </footer>
     </main>
   );
 }
